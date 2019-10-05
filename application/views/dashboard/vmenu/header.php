@@ -12,7 +12,7 @@
 			</div>
 			<!-- /Top Bar -->
 
-			<div id="header" class="sticky shadow-after-3 clearfix">
+			<div id="header" class="sticky clearfix">
 				<!-- TOP NAV -->
 				<header id="topNav">
 					<div class="container">

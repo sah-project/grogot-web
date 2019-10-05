@@ -8,9 +8,21 @@ class Syslogin extends CI_Controller{
  
 	}
  
-	function index(){
-		$this->load->view('admin/pages/v_login');
-	}
+	// function index(){
+	// 	$this->load->view('admin/pages/v_login');
+	// }
+
+
+	public function index(){
+        $data = array (
+            'sheader' => 'dashboard/ext/sheader',
+            'header' => 'dashboard/vmenu/header',
+            'content' => 'dashboard/pages/vlogin',
+            'footer'=> 'dashboard/vfooter/footer',
+            'sfooter'=> 'dashboard/ext/sfooter',     
+        );
+        $this->load->view("dashboard/index", $data);
+    }
  
 	function aksi_login(){
 		$username = $this->input->post('username');
@@ -28,11 +40,12 @@ class Syslogin extends CI_Controller{
 				);
  
 			$this->session->set_userdata($data_session);
- 
+ 			$this->session->set_flashdata('true_login', 'Selamat Datang');
 			redirect(base_url("admin"));
  
 		}else{
-			echo "Username dan password salah !";
+			$this->session->set_flashdata('wrong_login', 'Usernam atau Password Salah');
+			redirect(base_url("login"));
 		}
 	}
  

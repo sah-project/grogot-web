@@ -13,3 +13,16 @@ function deleteConfirm(url){
 	$('#deleteModal').modal();
 }
 </script>
+<script type="text/javascript" src="<?=base_url();?>dashboard/assets/swal/sweetalert2.all.min.js"></script>
+<script type="">
+	
+	const flashData = $('.flash-data').data('flashdata');
+	if (flashData) {
+		Swal.fire({
+			title: 'Berhasil Login',
+			text : '' + flashData,
+			type : 'success'
+		})
+	}
+</script>
+

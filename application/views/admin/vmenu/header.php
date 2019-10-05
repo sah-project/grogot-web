@@ -45,7 +45,7 @@
 									<!-- PAGES -->
 									<li class="dropdown <?php echo $this->uri->segment(2) == 'manage-data' ? 'active': '' ?>">
 										<a class="dropdown-toggle" href="#">
-											MANAGEMENT USER
+											MANAGEMENT DATA
 										</a>
 										<ul class="dropdown-menu">
 											<li><a href="page-careers.html">APBD</a></li>

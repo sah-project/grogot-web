@@ -1,3 +1,4 @@
+			<div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('true_login') ?>"></div>
 			<section class="page-header page-header-xs">
 				<div class="container">
 					<h1>MANAGEMENT BERITA</h1>
