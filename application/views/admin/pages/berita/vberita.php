@@ -102,6 +102,7 @@
 													<th>NO</th>
 													<th>Judul</th>
 													<th>Tanggal Posting</th>
+													<th>Gambar Artikel</th>
 													<th>Status Posting</th>
 													<th>Manage</th>
 												</tr>
@@ -118,7 +119,8 @@
 													<td><?php echo $n++ ?></td>
 													<td><?php echo $row->judul ?></td>
 													<td><?php echo $row->tanggal ?></td>
-													<td><?php
+													 <td><img width="45" height="45" alt="" src="<?php echo base_url('upload/berita/'.$row->image) ?>"></td>
+													 	<td><?php
 																if ($row->aktif=='0'){
 																	echo "<span class='label label-sm label-success'>Posted</span>";
 																}

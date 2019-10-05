@@ -38,7 +38,7 @@
 								<ul id="topMain" class="nav nav-pills nav-main">
 									<!-- MANAGE BERITA -->
 									<li class="<?php echo $this->uri->segment(2) == 'berita' ? 'active': '' ?>">
-										<a href="#">
+										<a href="<?=base_url('admin/berita/manage-berita') ?>">
 											MANAGEMENT BERITA
 										</a>
 									</li>

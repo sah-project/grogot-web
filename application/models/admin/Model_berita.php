@@ -47,7 +47,20 @@ class Model_berita extends CI_Model
         }
     }
 
-
+    public function post_status($id) {
+      $gallery = $this->getById_gallery($id);
+      if ($gallery->aktif==0) {
+              $this->db->query("update gallery set aktif='1' where id='$id'");
+              return true;
+            }      
+        else if ($gallery->aktif==1) {
+              $this->db->query("update gallery set aktif='0' where id='$id'");
+              return true;
+            }      
+            else 
+              echo "something wrong";
+            exit();
+    }
 
     private function _deleteImagegal($id)
     {

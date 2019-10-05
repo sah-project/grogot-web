@@ -232,6 +232,24 @@ class cberita  extends CI_Controller {
     }
 
 
+    public function post_status ($id){          
+        if (!empty($id)) {   
+            $action = $this->model_berita->post_status($id);
+
+            if ($action==true) {
+                    redirect('admin/berita/manage-gallery');  
+                } 
+                elseif ($action==false) {
+                    redirect('admin/berita/manage-gallery');  
+                }
+                else {
+                    echo "something wrong";
+                }  
+        } else {    
+          redirect('admin/berita/manage-gallery');
+        } 
+    }
+
     public function hps_gallery($id)
     {
         if (!isset($id)) show_404();

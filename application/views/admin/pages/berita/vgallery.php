@@ -127,10 +127,10 @@
 													 		if ($row->aktif=='0'){
 													 	 ?>
 													 	
-														<a href="<?php echo site_url('/admin/manberita/cberita/edit_gallery/'.$row->id)?>" class="btn btn-xs btn-3d btn-warning"><i class="glyphicon glyphicon-check"></i>Nonaktifkan</a>
+														<a href="<?php echo site_url('/admin/manberita/cberita/post_status/'.$row->id)?>" class="btn btn-xs btn-3d btn-warning"><i class="glyphicon glyphicon-check"></i>Nonaktifkan</a>
 													<?php } else {
 													 ?>
-													 	<a href="<?php echo site_url('/admin/manberita/cberita/edit_gallery/'.$row->id)?>" class="btn btn-xs btn-3d btn-success"><i class="glyphicon glyphicon-check"></i>Actifkan</a>
+													 	<a href="<?php echo site_url('/admin/manberita/cberita/post_status/'.$row->id)?>" class="btn btn-xs btn-3d btn-success"><i class="glyphicon glyphicon-check"></i>Aktifkan</a>
 													 </td>
 													<?php } ?>
 													<td>
