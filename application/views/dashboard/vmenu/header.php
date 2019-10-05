@@ -25,7 +25,7 @@
 							<!-- QUICK SHOP CART -->
 							<li class="quick-cart">
 								<a class="pull-right" href="#">
-									<i class="fa fa-user"></i> 
+									<i class="fa fa-user"></i>
 								</a>
 							</li>
 							<!-- /QUICK SHOP CART -->
@@ -33,30 +33,33 @@
 						<!-- /BUTTONS -->
 						<!-- Logo -->
 						<a class="logo pull-left" href="index.html">
-							<img src="<?=base_url();?>dashboard/assets/images/logo_dark.png" alt="" />
+							<img src="<?= base_url(); ?>dashboard/assets/images/logo_dark.png" alt="" />
 						</a>
-					<div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+						<div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
 							<nav class="nav-main">
 								<ul id="topMain" class="nav nav-pills nav-main">
-									<li class="active"><!-- HOME -->
+									<li class="active">
+										<!-- HOME -->
 										<a href="#slider">
 											HOME
 										</a>
 									</li>
-									<li class="dropdown"><!-- PAGES -->
+									<li class="dropdown">
+										<!-- PAGES -->
 										<a class="dropdown-toggle" href="#">
 											PROFILE
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="page-careers.html">PROFIL DESA</a></li>
-											<li><a href="page-sitemap.html">STRUKTUR ORGANISASI</a></li>
+											<li><a href="<?= base_url(); ?>profil/profil_desa">PROFIL DESA</a></li>
+											<li><a href="<?= base_url(); ?>profil/struktur_organisasi">STRUKTUR ORGANISASI</a></li>
 											<li><a href="page-blank.html">ORGANISAI NAUNGAN DESA</a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="#">DATA DESA</a>
+										<a href="<?= base_url(); ?>profil/data_desa">DATA DESA</a>
 									</li>
-									<li class="dropdown"><!-- PAGES -->
+									<li class="dropdown">
+										<!-- PAGES -->
 										<a class="dropdown-toggle" href="#">
 											BERITA
 										</a>
@@ -66,7 +69,8 @@
 											<li><a href="page-sitemap.html">BERITA TERKINI</a></li>
 										</ul>
 									</li>
-									<li class="dropdown"><!-- PAGES -->
+									<li class="dropdown">
+										<!-- PAGES -->
 										<a class="dropdown-toggle" href="#">
 											TRANSPARANSI
 										</a>
