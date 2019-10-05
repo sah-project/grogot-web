@@ -15,7 +15,7 @@ class struktur_organisasi extends CI_Controller
         $data = array(
             'sheader' => 'dashboard/ext/sheader',
             'header' => 'dashboard/vmenu/header',
-            'content' => 'profil/struktur_org',
+            'content' => 'dashboard/pages/profil/struktur_org',
             'footer' => 'dashboard/vfooter/footer',
             'sfooter' => 'dashboard/ext/sfooter',
         );

@@ -15,7 +15,7 @@ class data_desa extends CI_Controller
         $data = array(
             'sheader' => 'dashboard/ext/sheader',
             'header' => 'dashboard/vmenu/header',
-            'content' => 'profil/data_desa',
+            'content' => 'dashboard/pages/profil/data_desa',
             'footer' => 'dashboard/vfooter/footer',
             'sfooter' => 'dashboard/ext/sfooter',
         );
