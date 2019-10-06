@@ -4,7 +4,7 @@
 		<ul class="top-links list-inline pull-right">
 			<li class="text-welcome hidden-xs">Selamat datang di Website kami, <strong></strong></li>
 			<li>
-				<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href=""><i class="fa fa-user hidden-xs"></i> LOGIN</a>
+				<a href="<?= base_url('login') ?>"><i class="fa fa-user hidden-xs"></i> LOGIN</a>
 			</li>
 		</ul>
 		<!-- left -->
@@ -23,11 +23,11 @@
 			<!-- BUTTONS -->
 			<ul class="pull-right nav nav-pills nav-second-main">
 				<!-- QUICK SHOP CART -->
-				<li class="quick-cart">
+				<!-- <li class="quick-cart">
 					<a class="pull-right" href="#">
 						<i class="fa fa-user"></i>
 					</a>
-				</li>
+				</li> -->
 				<!-- /QUICK SHOP CART -->
 			</ul>
 			<!-- /BUTTONS -->
@@ -40,7 +40,7 @@
 					<ul id="topMain" class="nav nav-pills nav-main">
 						<li class="active">
 							<!-- HOME -->
-							<a href="<?= base_url(); ?>syslanding">
+							<a href="<?= base_url(); ?>">
 								HOME
 							</a>
 						</li>
@@ -50,13 +50,13 @@
 								PROFILE
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="<?= base_url(); ?>profil/profil_desa">PROFIL DESA</a></li>
-								<li><a href="<?= base_url(); ?>profil/struktur_organisasi">STRUKTUR ORGANISASI</a></li>
-								<li><a href="<?= base_url(); ?>profil/potensi_desa">POTENSI DESA</a></li>
+								<li><a href="<?= base_url(); ?>profil/profil-desa">PROFIL DESA</a></li>
+								<li><a href="<?= base_url(); ?>profil/struktur-organisasi">STRUKTUR ORGANISASI</a></li>
+								<li><a href="<?= base_url(); ?>profil/potensi-desa">POTENSI DESA</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="<?= base_url(); ?>profil/data_desa">DATA DESA</a>
+							<a href="<?= base_url(); ?>data-desa">DATA DESA</a>
 						</li>
 						<li class="dropdown">
 							<!-- PAGES -->
@@ -64,7 +64,7 @@
 								BERITA
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="<?= base_url() ?>berita/berita_agenda">AGENDA & UPDATE BERITA</a></li>
+								<li><a href="<?= base_url() ?>berita/berita-agenda">AGENDA & UPDATE BERITA</a></li>
 								<li><a href="<?= base_url(); ?>berita/gallery">GALLERY</a></li>
 							</ul>
 						</li>
@@ -74,7 +74,7 @@
 								LEMBAGA
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="<?= base_url(); ?>lembaga/rukun_tetangga">RUKUN TETANGGA</a></li>
+								<li><a href="<?= base_url(); ?>lembaga/rukun-tetangga">RUKUN TETANGGA</a></li>
 								<li><a href="<?= base_url(); ?>lembaga/lpmd">LPMD</a></li>
 								<li><a href="<?= base_url(); ?>lembaga/bpd">BPD</a></li>
 							</ul>
