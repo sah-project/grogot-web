@@ -32,7 +32,7 @@
 			</ul>
 			<!-- /BUTTONS -->
 			<!-- Logo -->
-			<a class="logo pull-left" href="index.html">
+			<a class="logo pull-left" href="<?php echo base_url() ?>">
 				<img src="<?= base_url(); ?>dashboard/assets/images/logo_dark.png" alt="" />
 			</a>
 			<div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
