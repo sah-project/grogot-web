@@ -169,8 +169,8 @@
 	<div class="container">
 
 		<header class="text-center">
-			<h1 class="weight-300 size-40">GALERRY</h1>
-			<h2 class="weight-300 letter-spacing-1 size-13"><span>POTRET KAMI</span></h2>
+			<h1 class="weight-300 size-40">SUMMARY GALERRY</h1>
+			<h2 class="weight-300 letter-spacing-1 size-13"><span>SUMMARY POTRET TERUPDATE KAMI</span></h2>
 		</header>
 	</div>
 </section>
@@ -179,215 +179,40 @@
 <section class="nopadding">
 	<div id="portfolio" class="portfolio-nogutter">
 		<div class="row mix-grid">
-			<div class="col-md-3 col-sm-3 mix development">
+
+			<!-- put modal here -->
+
+				<?php  
+					if($gallery->num_rows() > 0){  
+							foreach($gallery->result() as $row)
+							{  ?>
 				<!-- item -->
+				<div class="col-md-3 col-sm-3 mix development">
 				<div class="item-box">
 					<figure>
 						<span class="item-hover">
 							<span class="overlay dark-5"></span>
 							<span class="inner">
 								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/1-min.jpg" data-plugin-options='{"type":"image"}'>
+								<a class="ico-rounded lightbox" href="<?= base_url('upload/gallery/'); ?><?php echo $row->image ?>" data-plugin-options='{"type":"image"}'>
 									<span class="fa fa-plus size-20"></span>
 								</a>
 							</span>
 						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/1-min.jpg" width="600" height="399" alt="">
+						<img class="" src="<?= base_url('upload/gallery/'); ?><?php echo $row->image ?>" width="480" height="320" alt="">
 					</figure>
 					<div class="item-box-desc">
-						<h3>Nature Photography</h3>
+						<h3><?php echo $row->caption; ?></h3>
 						<ul class="list-inline categories nomargin">
-							<li><a href="#">Photography</a></li>
-							<li><a href="#">Design</a></li>
+							<li><a href="#"><?php echo $row->tanggal ?></a></li>
 						</ul>
 					</div>
 				</div>
-			</div><!-- /item -->
-			<div class="col-md-3 col-sm-3 mix development">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/11-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-								<!-- details -->
-							</span>
-						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/11-min.jpg" width="600" height="399" alt="">
-					</figure>
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
-			<div class="col-md-3 col-sm-3 mix photography">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/20-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/20-min.jpg" width="600" height="399" alt="">
-					</figure>
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
-			<div class="col-md-3 col-sm-3 mix design">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/19-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/19-min.jpg" width="600" height="399" alt="">
-					</figure>
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
+			</div>
+			<!-- /item -->
+		<?php }} ?>
 
-
-			<div class="col-md-3 col-sm-3 mix design">
-				<!-- item -->
-
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/12-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/12-min.jpg" width="600" height="399" alt="">
-					</figure>
-
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-			</div><!-- /item -->
-			<div class="col-md-3 col-sm-3 mix development">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/13-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/13-min.jpg" width="600" height="399" alt="">
-					</figure>
-
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
-
-
-			<div class="col-md-3 col-sm-3 mix photography">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/14-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/14-min.jpg" width="600" height="399" alt="">
-					</figure>
-
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
-
-
-			<div class="col-md-3 col-sm-3 mix design">
-				<!-- item -->
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url(); ?>dashboard/assets/images/demo/mockups/1200x800/15-min.jpg" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-						<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/mockups/600x399/15-min.jpg" width="600" height="399" alt="">
-					</figure>
-					<div class="item-box-desc">
-						<h3>Kegiatan 1</h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#">RT 12</a></li>
-							<li><a href="#">21 Januari 2019</a></li>
-						</ul>
-					</div>
-				</div>
-			</div><!-- /item -->
+			
 		</div>
 	</div>
 </section>

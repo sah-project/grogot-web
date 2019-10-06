@@ -7,10 +7,12 @@ class syslanding extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('dashboard/mdashboard');
     }
 
    public function index(){
         $data = array (
+            'gallery' => $this->mdashboard->gallery_landing(),
             'sheader' => 'dashboard/ext/sheader',
             'header' => 'dashboard/vmenu/header',
             'content' => 'dashboard/pages/index',
