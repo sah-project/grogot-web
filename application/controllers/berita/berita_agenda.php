@@ -24,17 +24,17 @@ class berita_agenda extends CI_Controller
         $this->load->view("dashboard/index", $data);
     }
 
-    public function details()
-    {
-        $data = array(
-            'id' => $this->uri->segment(3),
-            'berita' => $this->mdashboard->get_berita_by_kode(id),
+
+    public function details($id){
+        $data = array (
+            'berita' => $this->mdashboard->getById_berita($id),
             'sheader' => 'dashboard/ext/sheader',
             'header' => 'dashboard/vmenu/header',
-            'content' => 'dashboard/pages/berita/detail', berita,
+            'content' => 'dashboard/pages/berita/detail',
             'footer' => 'dashboard/vfooter/footer',
             'sfooter' => 'dashboard/ext/sfooter',
         );
-        $this->load->view("dashboard/index", $data);
+         $this->load->view("dashboard/index", $data);
     }
+
 }

@@ -64,7 +64,7 @@
 								BERITA
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="<?= base_url() ?>berita/berita-agenda">AGENDA & UPDATE BERITA</a></li>
+								<li><a href="<?= base_url() ?>berita/berita_agenda">AGENDA & UPDATE BERITA</a></li>
 								<li><a href="<?= base_url(); ?>berita/gallery">GALLERY</a></li>
 							</ul>
 						</li>

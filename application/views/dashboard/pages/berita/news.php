@@ -21,7 +21,7 @@
 			                    <h2><?php echo $judul; ?></h2>
 			                    <hr />
 			                    <img src="<?php echo base_url('upload/berita/') . $image ?>" width="400" height="200" alt="">
-			                    <?php echo limit_words($konten, 30); ?><a href="<?php echo base_url() . 'berita_agenda/details/' . $id; ?>"> Selengkapnya ></a>
+			                    <?php echo limit_words($konten, 30); ?><a href="<?php echo base_url() . 'berita/berita_agenda/details/' . $id; ?>"> Selengkapnya ></a>
 			                </div>
 			            <?php endforeach; ?>
 			        </div>
