@@ -194,12 +194,12 @@
 							<span class="overlay dark-5"></span>
 							<span class="inner">
 								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url('upload/gallery/'); ?><?php echo $row->image ?>" data-plugin-options='{"type":"image"}'>
+								<a class="ico-rounded lightbox" href="<?= base_url('upload/gallery/').$row->image; ?>" data-plugin-options='{"type":"image"}'>
 									<span class="fa fa-plus size-20"></span>
 								</a>
 							</span>
 						</span>
-						<img class="" src="<?= base_url('upload/gallery/'); ?><?php echo $row->image ?>" width="480" height="320" alt="">
+						<img class="" src="<?= base_url('upload/gallery/').$row->image; ?>" width="480" height="320" alt="">
 					</figure>
 					<div class="item-box-desc">
 						<h3><?php echo $row->caption; ?></h3>

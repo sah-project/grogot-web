@@ -53,6 +53,7 @@ $route['default_controller'] = 'syslanding';
 $route['login'] = 'syslogin';
 $route['logout'] = 'syslogin/logout';
 $route['admin'] = 'admin/manberita/cberita';
+$route['gallery'] = 'berita/cdashberita/gallery';
 $route['admin/berita/manage-berita'] = 'admin/manberita/cberita';
 $route['admin/berita/manage-gallery'] = 'admin/manberita/cberita/gallery';
 $route['admin/berita'] = 'admin/manberita/cberita/show_berita';
