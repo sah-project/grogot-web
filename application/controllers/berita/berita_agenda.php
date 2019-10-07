@@ -19,6 +19,7 @@ class berita_agenda extends CI_Controller
         $config['base_url'] = 'http://localhost:8080/hermaya-project/berita/berita_agenda/index';
         $config['total_rows'] = $this->mdashboard->countberita();
         $config['per_page'] = 5;
+        $config['num_links'] = 4;
 
         // styling
         $config['full_tag_open']= '<nav><ul class="pagination">';
