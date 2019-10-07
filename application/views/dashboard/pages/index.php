@@ -182,37 +182,37 @@
 
 			<!-- put modal here -->
 
-				<?php  
-					if($gallery->num_rows() > 0){  
-							foreach($gallery->result() as $row)
-							{  ?>
-				<!-- item -->
-				<div class="col-md-3 col-sm-3 mix development">
-				<div class="item-box">
-					<figure>
-						<span class="item-hover">
-							<span class="overlay dark-5"></span>
-							<span class="inner">
-								<!-- lightbox -->
-								<a class="ico-rounded lightbox" href="<?= base_url('upload/gallery/').$row->image; ?>" data-plugin-options='{"type":"image"}'>
-									<span class="fa fa-plus size-20"></span>
-								</a>
-							</span>
-						</span>
-						<img class="" src="<?= base_url('upload/gallery/').$row->image; ?>" width="480" height="320" alt="">
-					</figure>
-					<div class="item-box-desc">
-						<h3><?php echo $row->caption; ?></h3>
-						<ul class="list-inline categories nomargin">
-							<li><a href="#"><?php echo $row->tanggal ?></a></li>
-						</ul>
+			<?php
+			if ($gallery->num_rows() > 0) {
+				foreach ($gallery->result() as $row) {  ?>
+					<!-- item -->
+					<div class="col-md-3 col-sm-3 mix development">
+						<div class="item-box">
+							<figure>
+								<span class="item-hover">
+									<span class="overlay dark-5"></span>
+									<span class="inner">
+										<!-- lightbox -->
+										<a class="ico-rounded lightbox" href="<?= base_url('upload/gallery/') . $row->image; ?>" data-plugin-options='{"type":"image"}'>
+											<span class="fa fa-plus size-20"></span>
+										</a>
+									</span>
+								</span>
+								<img class="" src="<?= base_url('upload/gallery/') . $row->image; ?>" width="480" height="320" alt="">
+							</figure>
+							<div class="item-box-desc">
+								<h3><?php echo $row->caption; ?></h3>
+								<ul class="list-inline categories nomargin">
+									<li><a href="#"><?php echo $row->tanggal ?></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<!-- /item -->
-		<?php }} ?>
+					<!-- /item -->
+			<?php }
+			} ?>
 
-			
+
 		</div>
 	</div>
 </section>
@@ -415,162 +415,35 @@
 			<h2 class="weight-300 letter-spacing-1 size-13"><span>Update Berita Terkini Tentang Kami</span></h2>
 		</header>
 		<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/24-min.jpg" alt="">
-				</a>
+			<?php
+			function limit_words($string, $word_limit)
+			{
+				$words = explode(" ", $string);
+				return implode(" ", array_splice($words, 0, $word_limit));
+			} ?>
+			<?php
+			$n = 1;
+			foreach ($berita as $berita) :
+				?>
+				<div class="img-hover">
+					<img class="img-responsive" src="<?= base_url('upload/berita/') . $berita['image'] ?>" alt="" style="width:300px;height:200px;">
 
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/17-min.jpg" alt="">
-				</a>
-
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/30-min.jpg" alt="">
-				</a>
-
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/26-min.jpg" alt="">
-				</a>
-
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/18-min.jpg" alt="">
-				</a>
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/34-min.jpg" alt="">
-				</a>
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/37-min.jpg" alt="">
-				</a>
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="img-hover">
-				<a href="blog-single-default.html">
-					<img class="img-responsive" src="<?= base_url(); ?>dashboard/assets/images/demo/451x300/23-min.jpg" alt="">
-				</a>
-				<h4 class="text-left margin-top-20"><a href="blog-single-default.html">Lorem Ipsum Dolor</a></h4>
-				<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in.</p>
-				<ul class="text-left size-12 list-inline list-separator">
-					<li>
-						<i class="fa fa-calendar"></i>
-						29th Jan 2015
-					</li>
-					<li>
-						<a href="blog-single-default.html#comments">
-							<i class="fa fa-comments"></i>
-							3
-						</a>
-					</li>
-				</ul>
-			</div>
+					<h4 class="text-left margin-top-20"><a href="<?= base_url() . 'berita/berita_agenda/details/' . $berita['id']; ?>"><?= $berita['judul'] ?></a></h4>
+					<p class="text-left"><?= limit_words($berita['konten'], 30); ?></p>
+					<ul class="text-left size-12 list-inline list-separator">
+						<li>
+							<i class="fa fa-calendar"></i>
+							<?= $berita['tanggal'] ?>
+						</li>
+						<li>
+							<a href="blog-single-default.html#comments">
+								<i class="fa fa-comments"></i>
+								3
+							</a>
+						</li>
+					</ul>
+				</div>
+			<?php endforeach ?>
 		</div>
 
 	</div>
