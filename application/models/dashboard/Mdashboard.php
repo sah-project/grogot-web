@@ -33,4 +33,13 @@ class Mdashboard extends CI_Model
         $news = $this->db->query("SELECT * FROM berita ORDER BY id DESC");
         return $news;
     }
+
+
+    public function getberita($limit, $start) {
+    return $this->db->get('berita', $limit, $start)->result_array();    
+    }
+    
+    public function countberita(){
+        return $this->db->get('berita')->num_rows();        
+    }
 }
