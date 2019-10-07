@@ -104,7 +104,7 @@
 													<th>Tanggal Posting</th>
 													<th>Gambar Artikel</th>
 													<th>Status Posting</th>
-													<th>Manage</th>
+													<th colspan="2" class="text-center">Manage</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -129,10 +129,11 @@
 																} 
 															?>
 													 </td>
-													<td>
+													<td class="text-center">
 														<a href="<?php echo site_url('/admin/manberita/cberita/edit_berita/'.$row->id)?>" class="btn btn-xs btn-3d btn-teal"><i class="glyphicon glyphicon-pencil"></i>Edit</a>
+													</td>
+													<td class="text-center">
 														<a onclick="deleteConfirm('<?php echo site_url('admin/manberita/cberita/hps_berita/'.$row->id) ?>')" class="btn btn-xs btn-3d btn-red"><i class="glyphicon glyphicon-trash"></i>Hapus</a>
-														
 													</td>
 												</tr>
 												<?php } } ?>
