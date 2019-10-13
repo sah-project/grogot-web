@@ -3,9 +3,11 @@
 class Syslogin extends CI_Controller{
  
 	function __construct(){
-		parent::__construct();		
+		parent::__construct();
+		if ($this->session->userdata('status') == "login") {
+            redirect(base_url("admin"));
+        }
 		$this->load->model('m_login');
- 
 	}
  
 	// function index(){
@@ -44,7 +46,7 @@ class Syslogin extends CI_Controller{
 			redirect(base_url("admin"));
  
 		}else{
-			$this->session->set_flashdata('wrong_login', 'Usernam atau Password Salah');
+			$this->session->set_flashdata('wrong_login', 'Username atau Password Salah');
 			redirect(base_url("login"));
 		}
 	}
